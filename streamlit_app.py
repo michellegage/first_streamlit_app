@@ -43,3 +43,10 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
+#allow the end user to add a fruit to the list
+
+streamlit.write('Takes for adding ' add_my_fruit)
+
+#THis will not work correctly, but just go with it for now
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+
